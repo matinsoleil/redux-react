@@ -1,5 +1,13 @@
 
-import { createAction } from 'redux-actions';
+import { COUNTER_DECREMENT,COUNTER_INCREMENT } from '../actiontypes/index'
 
-export const incrementCounter = createAction('COUNTER_INCREMENT');
-export const decrementCounter = createAction('COUNTER_DECREMENT'); 
+export const incrementCounter = (message) => ({
+    type: COUNTER_INCREMENT,
+    payload: message
+  });
+  export const decrementCounter = (message) => ({
+    type: COUNTER_DECREMENT,
+    payload: message
+  });
+
+
